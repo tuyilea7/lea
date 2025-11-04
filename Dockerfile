@@ -1,7 +1,7 @@
 FROM php:8.1-apache
 
-# Install mysqli extension
-RUN docker-php-ext-install mysqli
+# Install mysqli extension and other required PHP extensions
+RUN docker-php-ext-install mysqli pdo pdo_mysql
 
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite
@@ -11,5 +11,8 @@ COPY src/ /var/www/html/
 
 # Set proper permissions
 RUN chown -R www-data:www-data /var/www/html
+RUN chmod -R 755 /var/www/html
 
 EXPOSE 80
+
+CMD ["apache2-foreground"]

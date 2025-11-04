@@ -24,10 +24,10 @@
         
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Database connection
-            $servername = "db";
+            $servername = "25rp20411-db";
             $username = "root";
             $password = "password";
-            $dbname = "220009456_shareride_db";
+            $dbname = "25rp20411_shareride_db";
             
             $conn = new mysqli($servername, $username, $password, $dbname);
             

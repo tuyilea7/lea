@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Checkout stage running'
-                git branch: 'main', url: 'https://github.com/yourusername/ride-sharing-app.git'
+                git branch: 'main', url: 'https://github.com/tuyilea7/lea.git'
             }
         }
         
